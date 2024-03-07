@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SignalR.BusinessLayer.Concrete
 {
-    internal class DiscountManager : IDiscountService
+    public class DiscountManager : IDiscountService
     {
         private readonly IDiscountDal _discountDal;
 

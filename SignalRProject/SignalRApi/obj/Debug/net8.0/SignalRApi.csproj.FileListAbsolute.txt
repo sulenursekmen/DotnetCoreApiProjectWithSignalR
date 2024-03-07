@@ -141,3 +141,7 @@ D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\obj\Debug\net8.0\re
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\obj\Debug\net8.0\SignalRApi.pdb
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\obj\Debug\net8.0\SignalRApi.genruntimeconfig.cache
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\obj\Debug\net8.0\ref\SignalRApi.dll
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\bin\Debug\net8.0\AutoMapper.dll
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\bin\Debug\net8.0\SignalR.DtoLayer.dll
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRApi\bin\Debug\net8.0\SignalR.DtoLayer.pdb
