@@ -41,7 +41,7 @@ namespace SignalRApi.Controllers
         }
 
         [HttpDelete]
-        private IActionResult DeleteSocialMedia(int id)
+        public IActionResult DeleteSocialMedia(int id)
         {
             var value = _socialMediaService.TGetByID(id);
             _socialMediaService.TDelete(value);

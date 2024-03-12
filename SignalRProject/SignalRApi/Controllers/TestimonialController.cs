@@ -43,7 +43,7 @@ namespace SignalRApi.Controllers
         }
 
         [HttpDelete]
-        private IActionResult DeleteTestimonial(int id)
+        public IActionResult DeleteTestimonial(int id)
         {
             var value = _testimonialService.TGetByID(id);
             _testimonialService.TDelete(value);

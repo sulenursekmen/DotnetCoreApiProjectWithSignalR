@@ -42,7 +42,7 @@ namespace SignalRApi.Controllers
         }
 
         [HttpDelete]
-        private IActionResult DeleteContact(int id)
+        public IActionResult DeleteContact(int id)
         {
             var value = _contactService.TGetByID(id);
             _contactService.TDelete(value);

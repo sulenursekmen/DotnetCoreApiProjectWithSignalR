@@ -44,7 +44,7 @@ namespace SignalRApi.Controllers
         }
 
         [HttpDelete]
-        private IActionResult DeleteFeature(int id)
+        public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetByID(id);
             _featureService.TDelete(value);

@@ -42,7 +42,7 @@ namespace SignalRApi.Controllers
         }
 
         [HttpDelete]
-        private IActionResult DeleteDiscount(int id)
+        public IActionResult DeleteDiscount(int id)
         {
             var value = _discountService.TGetByID(id);
             _discountService.TDelete(value);
