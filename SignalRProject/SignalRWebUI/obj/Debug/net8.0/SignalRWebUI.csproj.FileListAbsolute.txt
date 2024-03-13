@@ -235,3 +235,5 @@ D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\bin\Debug\net8.0\
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\obj\Debug\net8.0\SignalRWebUI.csproj.AssemblyReference.cache
 D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\obj\Debug\net8.0\SignalRWebUI.csproj.CopyComplete
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\DotnetCoreApiProjectWithSignalR\SignalRProject\SignalRWebUI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
