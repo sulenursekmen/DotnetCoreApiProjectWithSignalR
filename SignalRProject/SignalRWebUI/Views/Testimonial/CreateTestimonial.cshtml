@@ -1,0 +1,55 @@
+﻿@model CreateTestimonialDto
+
+@{
+    ViewData["Title"] = "CreateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Referans İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Yeni Referans Ekle</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="Name">Referans Adı Giriniz</label>
+                                <input type="text" class="form-control" id="Name" asp-for="Name">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="Title">Referans Başlığı Giriniz</label>
+                                <input type="text" class="form-control" id="Title" asp-for="Title">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="Comment">Referans Yorumu Giriniz</label>
+                                <input type="text" class="form-control" id="Comment" asp-for="Comment">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ImageUrl">Referans Resim Url'i Giriniz</label>
+                                <input type="text" class="form-control" id="ImageUrl" asp-for="ImageUrl">
+                            </div>
+                        </div>
+                     
+                        <div class="card-action">
+                            <button class="btn btn-primary">Referansı Ekle</button>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
