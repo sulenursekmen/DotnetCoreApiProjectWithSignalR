@@ -13,8 +13,30 @@ namespace SignalR.DataAccessLayer.EntityFramework
 {
 	public class EfOrderDal : GenericRepository<Order>, IOrderDal
 	{
+		private readonly SignalRContext _context;
 		public EfOrderDal(SignalRContext context) : base(context)
 		{
+			_context = context;
+		}
+
+		public int ActiveOrderCount()
+		{
+			return _context.Orders.Where(x=>x.Description=="Müşteri Masada").Count();
+
+		}
+
+		public decimal LastOrderPrice()
+		{
+			//var lastOrder = _context.Orders.OrderByDescending(x => x.Date).FirstOrDefault();
+
+			//return lastOrder != null ? lastOrder.TotalPrice : 0;
+			return _context.Orders.OrderByDescending(x=>x.OrderID).Take(1).Select(y=>y.TotalPrice).FirstOrDefault();
+
+		}
+
+		public int TotalOrderCount()
+		{
+			return _context.Orders.Count();
 		}
 	}
 }
