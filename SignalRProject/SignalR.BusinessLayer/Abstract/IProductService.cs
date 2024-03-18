@@ -10,5 +10,13 @@ namespace SignalR.BusinessLayer.Abstract
     public interface IProductService:IGenericService<Product>
     {
         List<Product> TGetProductsWithCategories();
-    }
+
+        public int TProductCount();
+		public int TProductCountByCategoryNameHamburger();
+		public int TProductCountByCategoryNameDrink();
+		decimal TProductPriceAvg();
+		string TProductNameByMaxPrice();
+		string TProductNameByMinPrice();
+
+	}
 }
