@@ -28,7 +28,7 @@ builder.Services.AddSignalR();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<SignalRContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
+	options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
 });
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
@@ -50,6 +50,13 @@ builder.Services.AddScoped<IDiscountDal, EfDiscountDal>();
 
 builder.Services.AddScoped<IFeatureService, FeatureManager>();
 builder.Services.AddScoped<IFeatureDal, EfFeatureDal>();
+
+builder.Services.AddScoped<IMenuTableService, MenuTableManager>();
+builder.Services.AddScoped<IMenuTableDal, EfMenuTableDal>();
+
+builder.Services.AddScoped<IMoneyBoxService, MoneyBoxManager>();
+builder.Services.AddScoped<IMoneyBoxDal, EfMoneyBoxDal>();
+
 
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<IProductDal, EfProductDal>();

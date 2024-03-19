@@ -34,6 +34,11 @@ namespace SignalR.DataAccessLayer.EntityFramework
 
 		}
 
+		public decimal TodayTotalPrice()
+		{
+			return _context.Orders.Count();
+		}
+
 		public int TotalOrderCount()
 		{
 			return _context.Orders.Count();
