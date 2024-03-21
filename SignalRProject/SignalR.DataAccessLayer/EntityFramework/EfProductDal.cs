@@ -40,7 +40,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
 			return _context.Products.Where(x => x.CategoryID == (_context.Categories.Where(y => y.Name == "Hamburger").Select(z => z.CategoryID).FirstOrDefault())).Count();
 		}
 
-		public string ProductNameByMaxPrice()
+        public string ProductNameByMaxPrice()
 		{
 			var values = _context.Products
 								.Where(x => x.Price == (_context.Products.Max(y => y.Price)))

@@ -1,0 +1,101 @@
+﻿@model List<ResultProductWithCategory>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body class="sub_page">
+
+    @await Component.InvokeAsync("_MenuNavbarComponentPartial")
+
+    <!-- food section -->
+
+    <section class="food_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>
+                    Menümüz
+                </h2>
+            </div>
+
+            <ul class="filters_menu">
+                <li class="active" data-filter="*">Tümü</li>
+                @foreach (var category in Model.Select(item => item.CategoryName).Distinct())
+                {
+                    <li onclick="filterByCategory('@category')" data-filter=".@(category)">@category</li>
+
+                }
+            </ul>
+
+            <div class="filters-content">
+                <div class="row grid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-sm-6 col-lg-4 @item.CategoryName">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="@item.ImageUrl" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5>
+                                            @item.Name
+                                        </h5>
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                        <div class="options">
+                                            <h6>
+                                                @item.Price ₺
+                                            </h6>
+                                            <a href="#" onclick="showproductid('@item.ProductID','@item.Name')">
+                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="">
+                    View More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- end food section -->
+    <!-- footer section -->
+  @*   @await Component.InvokeAsync("_UILayoutFooterComponentPartial") *@
+    <!-- footer section -->
+   @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
+
+   <script>
+       function showproductid(value) {
+           var id = value;
+    
+           $.ajax({
+               type: 'post',
+               data: { item: id },
+               contentType: 'json',
+               success: function () {
+                    swal("Seçilen Ürün" + id, "Başarıyla Siparişiniz Alınmıştır!", "success");
+               }
+
+           });
+       }
+      
+   </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
