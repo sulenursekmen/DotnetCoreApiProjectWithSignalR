@@ -9,7 +9,8 @@
       "SignalRWebUI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": "8.0.3",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "SignalR.EntityLayer": "1.0.0"
         },
         "runtime": {
           "SignalRWebUI.dll": {}
@@ -1640,6 +1641,11 @@
             "fileVersion": "7.0.22.51805"
           }
         }
+      },
+      "SignalR.EntityLayer/1.0.0": {
+        "runtime": {
+          "SignalR.EntityLayer.dll": {}
+        }
       }
     }
   },
@@ -2586,6 +2592,11 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "SignalR.EntityLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

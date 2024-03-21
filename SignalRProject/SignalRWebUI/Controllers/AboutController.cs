@@ -6,7 +6,7 @@ namespace SignalRWebUI.Controllers
 {
 	public class AboutController : Controller
 	{
-	private readonly IHttpClientFactory _httpClientFactory;
+	    private readonly IHttpClientFactory _httpClientFactory;
 		private string apiUrl = "https://localhost:7168/api/About";
 		public AboutController(IHttpClientFactory httpClientFactory)
 		{
